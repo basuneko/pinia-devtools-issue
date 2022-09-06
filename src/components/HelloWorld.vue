@@ -32,12 +32,17 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { useBaconStore } from '@/useBaconStore';
 
 export default Vue.extend({
   name: 'HelloWorld',
   props: {
     msg: String,
   },
+
+  mounted() {
+    const store = useBaconStore();
+  }
 });
 </script>
 
