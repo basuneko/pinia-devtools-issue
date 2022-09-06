@@ -32,7 +32,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { useBaconStore } from '@/useBaconStore';
+import { baconStore } from '@/useBaconStore';
+import { yoloStore } from '@/useYoloStore';
 
 export default Vue.extend({
   name: 'HelloWorld',
@@ -41,7 +42,8 @@ export default Vue.extend({
   },
 
   mounted() {
-    const store = useBaconStore();
+    console.log(baconStore.bacon);
+    console.log(yoloStore.yolo);
   }
 });
 </script>

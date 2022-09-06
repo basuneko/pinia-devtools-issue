@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia';
 import { pinia } from '@/pinia';
 
-export const useBaconStore = defineStore('bacon', {
+export const useYoloStore = defineStore('yolo', {
   state: () => ({
-    bacon: 'bacon'
+    yolo: 'yolo'
   }),
 
   getters: {},
@@ -11,4 +11,4 @@ export const useBaconStore = defineStore('bacon', {
   actions: {}
 })
 
-export const baconStore = useBaconStore(pinia);
+export const yoloStore = useYoloStore(pinia);
