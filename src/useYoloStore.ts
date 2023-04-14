@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import { pinia } from '@/pinia';
 
 export const useYoloStore = defineStore('yolo', {
   state: () => ({
@@ -10,5 +9,3 @@ export const useYoloStore = defineStore('yolo', {
 
   actions: {}
 })
-
-export const yoloStore = useYoloStore(pinia);

@@ -10,5 +10,3 @@ export const useBaconStore = defineStore('bacon', {
 
   actions: {}
 })
-
-export const baconStore = useBaconStore(pinia);

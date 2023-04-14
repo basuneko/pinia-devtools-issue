@@ -32,18 +32,22 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { baconStore } from '@/useBaconStore';
-import { yoloStore } from '@/useYoloStore';
+import { mapState } from 'pinia'
+import { useBaconStore } from '@/useBaconStore';
+import { useYoloStore } from '@/useYoloStore';
 
 export default Vue.extend({
   name: 'HelloWorld',
   props: {
     msg: String,
   },
-
+  computed: {
+    ...mapState(useBaconStore, ['bacon']),
+    ...mapState(useYoloStore, ['yolo']),
+  },
   mounted() {
-    console.log(baconStore.bacon);
-    console.log(yoloStore.yolo);
+    console.log(this.bacon);
+    console.log(this.yolo);
   }
 });
 </script>
